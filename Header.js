@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Nav from './Nav'
+import Nav from './components/Nav'
 
 export default function Header () {
     return (
@@ -20,7 +20,7 @@ export default function Header () {
                 </Link>
                 <h1>Moon Fish</h1>
                 <p>Moon Fish 𩵜月 is a personal Vietnam culture blog.</p>
-                <a href="https://www.hannom-rcv.org/font.html" target="_blank" className="nom-alert">This website uses Nôm characters.</a>
+                <a href="https://www.hannom-rcv.org/font.html" target="_blank" rel="noreferrer" className="nom-alert">This website uses Nôm characters.</a>
             </div>
             <Nav />
         </header>

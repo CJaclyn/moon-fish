@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ActiveLink from './ActiveLink'
+import ActiveLink from './components/ActiveLink'
 
 export default function Nav () {
     return (

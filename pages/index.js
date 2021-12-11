@@ -33,7 +33,7 @@ export default function Home({ allPostsData }) {
           <h2 className="highlight">Recent Posts</h2>
           <div className="posts-container">
             {post.slice(0, 4).map(({ id, title, date, description }) => (
-              <Link href={`/post/${ id }`} key={ id }>
+              <Link href={`/post/${ id }`} key={ id } passHref>
                 <div className="post-container">
                   <p className="post-date">{ date }</p>
                   <h3 className="post-title">{ title }</h3>
