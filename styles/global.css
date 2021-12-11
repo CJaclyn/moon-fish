@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap");
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #0c0c0c;
+  font-weight: lighter;
+}
+
+#__next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+p, a, li {
+  font-size: 1rem;
+  margin: 0;
+}
+
+p, li {
+  line-height: 2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nom-alert {
+  background: #eeeeee;
+  font-size: .75rem;
+  display: inline-block;
+  line-height: 1rem;
+}
+
+.nom-alert a {
+  font-size: .75rem;
+}
+
+.button {
+  padding: .5rem 2.5rem;
+  background: #FFF0F0;
+  margin-top: 2rem;
+}
+
+.highlight {
+  background: #FFF0F0;
+  display: inline-block;
+  padding: .25rem 1rem;
+}
+
+nav a {
+  margin: 0 0.5rem;
+}
+
+nav a:nth-of-type(1) {
+  margin-left: 0;
+}
+
+nav a:last-of-type {
+  margin-right: 0;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+main {
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0;
+}
+
+.header-top {
+  margin-bottom: 2rem;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.not-found {
+  text-align: center;
+}
+
+.not-found h1, .not-found h2 {
+  margin: 0;
+}
+
+.not-found h1 {
+  font-size: 10rem;
+}
+
+.not-found h2 {
+  font-size: 3rem;
+}
+
+.not-found p {
+  margin-bottom: 2rem;
+}
+
+.post-container {
+  border: solid 1px #0c0c0c;
+  padding: 2rem;
+  padding-top: .5rem;
+  margin-bottom: 1.5rem;
+  -webkit-transition: ease-in-out .25s;
+  transition: ease-in-out .25s;
+  cursor: pointer;
+  height: 230px;
+}
+
+.post-container:hover {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+}
+
+.post-container .post-date {
+  text-align: left;
+}
+
+.post-date {
+  font-size: 1rem;
+}
+
+.recent-posts h2, .featured-posts h2 {
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 500px) {
+  .post-container {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .post-container {
+    width: 600px;
+  }
+  p, a, li {
+    font-size: 1rem;
+    margin: 0;
+  }
+  nav a {
+    margin: 0 1rem;
+  }
+  nav a:nth-of-type(1) {
+    margin-left: 0;
+  }
+  nav a:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1368px) {
+  .page {
+    width: 1000px;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .posts-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .recent-posts, .featured-posts {
+    width: 824px;
+  }
+  .featured-posts .post-container {
+    width: 100%;
+  }
+  .recent-posts .post-container {
+    width: 400px;
+    margin-right: 1.5rem;
+  }
+  .recent-posts .post-container:nth-of-type(2), .recent-posts .post-container:nth-of-type(4) {
+    margin-right: 0;
+  }
+  main {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .page {
+    width: 1000px;
+  }
+}
+/*# sourceMappingURL=global.css.map */
