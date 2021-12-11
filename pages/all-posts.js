@@ -17,7 +17,7 @@ export default function Home({ allPostsData }) {
           <h2 className="highlight">All Posts</h2>
           <div className="posts-container">
             {post.map(({ id, title, date, description }) => (
-              <Link href={`/post/${ id }`} key={ id }>
+              <Link href={`/post/${ id }`} key={ id } passHref>
                 <div className="post-container">
                   <p className="post-date">{ date }</p>
                   <h3 className="post-title">{ title }</h3>

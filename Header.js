@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Nav from './components/Nav'
+import Nav from './Nav'
 
 export default function Header () {
     return (

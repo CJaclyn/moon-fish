@@ -21,7 +21,7 @@ export default function Resources () {
                     <ul>
                         <li><a href="https://www.facebook.com/gr8vietnam/" target="_blank" rel="noreferrer">Great Vietnam 大越南</a></li>
                         <li><a href="https://www.facebook.com/Hoanien.concept/" target="_blank" rel="noreferrer">Hoa Niên</a></li>
-                        <li><a href="https://www.facebook.com/vstyle.vietcophuc/" target="_blank" rel="noreferrer">V'style - Việt Cổ Phục Cách Tân</a></li>
+                        <li><a href="https://www.facebook.com/vstyle.vietcophuc/" target="_blank" rel="noreferrer">V&apos;style - Việt Cổ Phục Cách Tân</a></li>
                         <li><a href="https://www.facebook.com/ctcpyvanhien/" target="_blank" rel="noreferrer">Ỷ VÂN HIÊN 倚雲軒</a></li>
                     </ul>
                 </article>
