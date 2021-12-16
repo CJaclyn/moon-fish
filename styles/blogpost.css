@@ -45,19 +45,20 @@
 .page-post .portrait-container {
   position: relative;
   height: 300px;
-  width: 100%;
+  width: 250px;
 }
 
 .page-post .portrait-container img {
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   -o-object-position: top;
      object-position: top;
 }
 
 .page-post .info-box-container {
   text-align: center;
+  width: 250px;
 }
 
 .page-post .celeb-post-content {
@@ -88,6 +89,9 @@
         -ms-flex-direction: row;
             flex-direction: row;
     text-align: left;
+  }
+  .page-post .info-box-section {
+    width: 50%;
   }
   .page-post .info-box-section:last-of-type {
     margin-left: 2rem;
@@ -150,6 +154,12 @@
   }
   .page-post .info-box {
     margin-left: 2rem;
+  }
+  .page-post .info-box-container {
+    width: 100%;
+  }
+  .page-post .info-box-section {
+    width: 150px;
   }
 }
 
