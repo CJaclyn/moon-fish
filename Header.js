@@ -19,7 +19,10 @@ export default function Header () {
                     </a>
                 </Link>
                 <h1>Moon Fish</h1>
-                <p>Moon Fish 𩵜月 is a personal Vietnam culture blog.</p>
+                <p>
+                    Vietnam history and culture blog <br />
+                    ✧･ﾟ: *✧･ﾟ:* 悉哿眾些調𤯨𥪝𣹟𤃡，仍吻固𠊛當𥈴𥆾匏𡗶𣋀。 *:･ﾟ✧*:･ﾟ✧
+                </p>
                 <a href="https://www.hannom-rcv.org/font.html" target="_blank" rel="noreferrer" className="nom-alert">This website uses Nôm characters.</a>
             </div>
             <Nav />

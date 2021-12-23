@@ -1,9 +1,20 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { getAllPostsData } from '../lib/posts';
+import Moment from "react-moment";
+import { fetchAPI } from '../lib/api';
 
-export default function Home({ allPostsData }) {
-  const post = allPostsData;
+export default function Home ({ postData }) {
+  const posts = postData['data'];
+  const post = []
+
+  function getPosts() {
+    for(let i in posts) {
+      post.push(posts[i].attributes)
+    }
+    return post;
+  }
+
+  getPosts();
 
   return (
     <div className="page-home page">
@@ -13,32 +24,36 @@ export default function Home({ allPostsData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="featured-posts">
-          <h2 className="highlight">Featured Posts</h2>
-            {post.map(({ id, title, date, featured, description }) => (
-              <Link href={`/post/${ id }`} key={ id }>
-                {featured == true ? 
-                  <div className="post-container">
-                    <p className="post-date">{ date }</p>
-                    <h3 className="post-title">{ title }</h3>
-                    <p className="post-preview">{ description }</p>
-                  </div>  
-                  : 
-                  ""
-                }
-              </Link>
-            ))}
+      <div className="featured-posts">
+        <h2 className="highlight">Featured Posts</h2>
+          {post.map(({ featured, slug, date, title, description }) => (
+            <Link href={`/post/${ slug }`} key={ slug }>
+              {featured == true ? 
+                <div className="post-container">
+                  <p className="post-date">
+                    <Moment format="MMMM DD, YYYY">{ date }</Moment>
+                  </p>
+                  <h3 className="post-title">{ title }</h3>
+                  <p className="post-preview">{ description }</p>
+                </div>  
+                : 
+                ""
+              }
+            </Link>
+          ))}
         </div>
         <div className="recent-posts">
           <h2 className="highlight">Recent Posts</h2>
           <div className="posts-container">
-            {post.slice(0, 4).map(({ id, title, date, description }) => (
-              <Link href={`/post/${ id }`} key={ id } passHref>
+            {post.slice(0, 4).map(({ slug, date, title, description }) => (
+              <Link href={`/post/${ slug }`} key={ slug } passHref>
                 <div className="post-container">
-                  <p className="post-date">{ date }</p>
-                  <h3 className="post-title">{ title }</h3>
-                  <p className="post-preview">{ description }</p>
-                </div>                  
+                    <p className="post-date">
+                      <Moment format="MMMM DD, YYYY">{ date }</Moment>
+                    </p>
+                    <h3 className="post-title">{ title }</h3>
+                    <p className="post-preview">{ description }</p>
+                </div>                 
               </Link>
             ))}
           </div>
@@ -52,11 +67,11 @@ export default function Home({ allPostsData }) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getAllPostsData()
-  
+  const postData = await fetchAPI(`posts`)
+
   return {
     props: {
-      allPostsData
+      postData,
     }
   }
 }

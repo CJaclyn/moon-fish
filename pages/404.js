@@ -1,5 +1,5 @@
 import Link from 'next/link'
-export default function Custom404() {
+export default function Custom404 () {
     return (
         <div className="not-found">
             <h1>落</h1>

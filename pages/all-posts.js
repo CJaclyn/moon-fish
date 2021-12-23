@@ -1,9 +1,20 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { getAllPostsData } from '../lib/posts';
+import Moment from 'react-moment';
+import { fetchAPI } from '../lib/api';
 
-export default function Home({ allPostsData }) {
-  const post = allPostsData;
+export default function AllPosts ({ postData }) {
+  const posts = postData['data'];
+  const post = []
+
+  function getPosts() {
+    for(let i in posts) {
+      post.push(posts[i].attributes)
+    }
+    return post;
+  }
+
+  getPosts();
 
   return (
     <div className="page-home page">
@@ -16,15 +27,17 @@ export default function Home({ allPostsData }) {
         <div className="recent-posts">
           <h2 className="highlight">All Posts</h2>
           <div className="posts-container">
-            {post.map(({ id, title, date, description }) => (
-              <Link href={`/post/${ id }`} key={ id } passHref>
-                <div className="post-container">
-                  <p className="post-date">{ date }</p>
+          {post.map(({ slug, date, title, description }) => (
+            <Link href={`/post/${ slug }`} key={ slug } passHref>
+              <div className="post-container">
+                  <p className="post-date">
+                    <Moment format="MMMM DD, YYYY">{ date }</Moment>
+                  </p>
                   <h3 className="post-title">{ title }</h3>
                   <p className="post-preview">{ description }</p>
-                </div>                  
-              </Link>
-            ))}
+              </div>                 
+            </Link>
+          ))}
           </div>
         </div>
       </main>
@@ -33,11 +46,11 @@ export default function Home({ allPostsData }) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getAllPostsData()
-  
+  const postData = await fetchAPI(`posts`)
+
   return {
     props: {
-      allPostsData
+      postData,
     }
   }
 }

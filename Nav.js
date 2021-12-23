@@ -11,12 +11,6 @@ export default function Nav () {
                 <ActiveLink href="/all-posts" className="nav-link">
                     All Posts
                 </ActiveLink>
-                <ActiveLink href="/resources" className="nav-link">
-                    Resources
-                </ActiveLink>
-                {/*<ActiveLink href="/vietnamese-celebrity-database" className="nav-link">
-                    Celebrity Database
-                </ActiveLink>*/}
             </div>
     </nav>
     )

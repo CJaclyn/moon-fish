@@ -4,7 +4,8 @@ import '../styles/blogpost.css'
 import Header from '../Header'
 import Footer from '../Footer'
 
-function MyApp({ Component, pageProps }) {
+function MyApp ({ Component, pageProps }) {
+
   return (
     <>
     <Header />
