@@ -96,7 +96,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const postData = await fetchAPI(`posts?filters[slug][$eq]=${ params.slug }`)
-    //const celebType = await fetchAPI(`celebType?filters[celeb][$eq]=${ params.slug }`)
 
     return {
         props: { 
