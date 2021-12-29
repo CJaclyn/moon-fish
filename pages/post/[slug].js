@@ -24,7 +24,10 @@ export default function Post ({ postData }) {
         <div className="page-post">
             <Head>
                 <title>{ post.title }</title>
-                <meta name="description" content={ post.description } />
+                { post.seoDescription == null 
+                    ?<meta name="description" content={ post.description } />
+                    :<meta name="description" content={ post.seoDescription } />
+                }
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
