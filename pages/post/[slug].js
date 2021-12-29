@@ -6,7 +6,7 @@ import { fetchAPI } from "../../lib/api";
 export default function Post ({ postData }) {
     const post = postData['data'][0].attributes
 
-    if(post.portrait.data !== null && !post.celebType.data.length) {
+    if(post.portrait.data !== null) {
         var img = post.portrait['data'].attributes.url;
         const types = post.celebType['data'];
         var type = [];
@@ -19,7 +19,6 @@ export default function Post ({ postData }) {
         }
 
         getCelebType();
-        console.log(type)
     }
 
     return (
@@ -54,7 +53,7 @@ export default function Post ({ postData }) {
                                         <p className="label">Hán tự</p>
                                         <p>{ post.hantu }</p>
                                         <p className="label">Occupation</p>
-                                        <p></p>
+                                        <p>{ type.join(', ') }</p>
                                     </div>
                                     <div className="info-box-section">
                                         <p className="label">Born</p>
