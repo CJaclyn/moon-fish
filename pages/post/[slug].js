@@ -5,10 +5,6 @@ import Moment from "react-moment";
 import { fetchAPI } from "../../lib/api";
 
 export default function Post ({ postData }) {
-    const post = postData['data'][0].attributes
-    const img = post.portrait['data'].attributes.url
-    const types = post.celebType['data']
-    const type = []
     const router = useRouter()
 
     if(router.isFallback) {
@@ -17,6 +13,11 @@ export default function Post ({ postData }) {
                     <p>Loading...</p>
                 </div>
     }
+    
+    const post = postData['data'][0].attributes
+    const img = post.portrait['data'].attributes.url
+    const types = post.celebType['data']
+    const type = []
 
     function getCelebType() {
         for(let i in types) {
