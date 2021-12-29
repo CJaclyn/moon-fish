@@ -1,33 +1,25 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 import { fetchAPI } from "../../lib/api";
 
 export default function Post ({ postData }) {
-    const router = useRouter()
-
-    if(router.isFallback) {
-        return  <div>
-                    <h1>登載。。。</h1>
-                    <p>Loading...</p>
-                </div>
-    }
-    
     const post = postData['data'][0].attributes
-    const img = post.portrait['data'].attributes.url
-    const types = post.celebType['data']
-    const type = []
 
-    function getCelebType() {
-        for(let i in types) {
-            type.push(types[i].attributes.type)
+    if(post.hasOwnProperty('portrait') && post.hasOwnProperty('celebType')) {
+        var img = post.portrait['data'].attributes.url
+        const types = post.celebType['data']
+        const type = []
+
+        function getCelebType() {
+            for(let i in types) {
+                type.push(types[i].attributes.type)
+            }
+            return type;
         }
-        return type;
-    }
-    
-    getCelebType();
 
+        getCelebType()
+    }
 
     return (
         <div className="page-post">
@@ -91,6 +83,17 @@ export default function Post ({ postData }) {
     )
 }
 
+export async function getStaticProps({ params }) {
+    const postData = await fetchAPI(`posts?filters[slug][$eq]=${ params.slug }&populate=*`)
+
+    return {
+        props: { 
+            postData
+        },
+        revalidate: 10,
+    }
+}
+
 export async function getStaticPaths() {
     const postData = await fetchAPI(`posts`)
 
@@ -112,17 +115,6 @@ export async function getStaticPaths() {
                 slug: slug,
             }
         })),
-        fallback: true,
-    }
-}
-
-export async function getStaticProps({ params }) {
-    const postData = await fetchAPI(`posts?filters[slug][$eq]=${ params.slug }&populate=*`)
-
-    return {
-        props: { 
-            postData
-        },
-        revalidate: 60,
+        fallback: 'blocking'
     }
 }
