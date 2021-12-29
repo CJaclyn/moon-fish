@@ -5,6 +5,20 @@ import { fetchAPI } from "../../lib/api";
 
 export default function Post ({ postData }) {
     const post = postData['data'][0].attributes
+    const img = post.portrait['data'].attributes.url
+    const types = post.celebType['data']
+    const type = []
+
+    function getCelebType() {
+        for(let i in types) {
+            type.push(types[i].attributes.type)
+        }
+        console.log(type)
+        return type;
+    }
+    
+    getCelebType();
+
 
     return (
         <div className="page-post">
@@ -28,7 +42,7 @@ export default function Post ({ postData }) {
                         <>
                         <div className="celebrity-top">
                             <div className="portrait-container">
-                                <img src={ post.portrait } alt={`${ post.name } portrait`}></img>
+                                <img src={ img } alt={`${ post.name } portrait`}></img>
                             </div>
                             <div className="info-box">
                                 <h2>{ post.name }</h2>
@@ -39,7 +53,7 @@ export default function Post ({ postData }) {
                                         <p className="label">Hán tự</p>
                                         <p>{ post.hantu }</p>
                                         <p className="label">Occupation</p>
-                                        <p>{ post.celebType }</p>
+                                        <p>{ type.join(', ') }</p>
                                     </div>
                                     <div className="info-box-section">
                                         <p className="label">Born</p>
@@ -95,7 +109,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const postData = await fetchAPI(`posts?filters[slug][$eq]=${ params.slug }`)
+    const postData = await fetchAPI(`posts?filters[slug][$eq]=${ params.slug }&populate=*`)
 
     return {
         props: { 
