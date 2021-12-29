@@ -13,7 +13,6 @@ export default function Post ({ postData }) {
         for(let i in types) {
             type.push(types[i].attributes.type)
         }
-        console.log(type)
         return type;
     }
     
