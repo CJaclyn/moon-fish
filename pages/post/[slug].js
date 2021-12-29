@@ -36,10 +36,6 @@ export default function Post ({ postData }) {
                     <p className="post-date">
                         <Moment format="MMMM DD, YYYY">{ post.date }</Moment>
                     </p>
-                    <p className="updated">
-                        Last updated&nbsp;
-                        <Moment format="MMMM DD, YYYY">{ post.updatedAt }</Moment>
-                    </p>
                     <h1 className="highlight">{ post.title }</h1>
                     { post.celebrity === true ? 
                         <>
