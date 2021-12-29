@@ -9,6 +9,14 @@ export default function Post ({ postData }) {
     const img = post.portrait['data'].attributes.url
     const types = post.celebType['data']
     const type = []
+    const router = useRouter()
+
+    if(router.isFallback) {
+        return  <div>
+                    <h1>登載。。。</h1>
+                    <p>Loading...</p>
+                </div>
+    }
 
     function getCelebType() {
         for(let i in types) {
@@ -103,7 +111,7 @@ export async function getStaticPaths() {
                 slug: slug,
             }
         })),
-        fallback: false,
+        fallback: true,
     }
 }
 
