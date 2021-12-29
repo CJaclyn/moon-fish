@@ -102,7 +102,7 @@ export async function getStaticPaths() {
                 slug: slug,
             }
         })),
-        fallback: false,
+        fallback: true,
     }
 }
 
