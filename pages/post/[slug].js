@@ -9,7 +9,7 @@ export default function Post ({ postData }) {
     if(post.hasOwnProperty('portrait') && post.hasOwnProperty('celebType')) {
         var img = post.portrait['data'].attributes.url
         const types = post.celebType['data']
-        const type = []
+        var type = []
 
         function getCelebType() {
             for(let i in types) {
