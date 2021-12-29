@@ -5,11 +5,11 @@ import { fetchAPI } from '../lib/api';
 
 export default function Home ({ postData }) {
   const posts = postData['data'];
-  const post = []
+  const post = [];
 
   function getPosts() {
     for(let i in posts) {
-      post.push(posts[i].attributes)
+      post.push(posts[i].attributes);
     }
     return post;
   }

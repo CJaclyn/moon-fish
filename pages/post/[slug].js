@@ -6,19 +6,19 @@ import { fetchAPI } from "../../lib/api";
 export default function Post ({ postData }) {
     const post = postData['data'][0].attributes
 
-    if(post.hasOwnProperty('portrait') && post.hasOwnProperty('celebType')) {
-        var img = post.portrait['data'].attributes.url
-        const types = post.celebType['data']
-        var type = []
+    if(post.portrait.data !== null && !post.celebType.data.length) {
+        var img = post.portrait['data'].attributes.url;
+        const types = post.celebType['data'];
+        var type = [];
 
         function getCelebType() {
             for(let i in types) {
-                type.push(types[i].attributes.type)
+                type.push(types[i].attributes.type);
             }
             return type;
         }
 
-        getCelebType()
+        getCelebType();
     }
 
     return (
