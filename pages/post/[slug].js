@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 import { fetchAPI } from "../../lib/api";
@@ -8,6 +9,14 @@ export default function Post ({ postData }) {
     const img = post.portrait['data'].attributes.url
     const types = post.celebType['data']
     const type = []
+    const router = useRouter()
+
+    if(router.isFallback) {
+        return  <div>
+                    <h1>登載。。。</h1>
+                    <p>Loading...</p>
+                </div>
+    }
 
     function getCelebType() {
         for(let i in types) {
