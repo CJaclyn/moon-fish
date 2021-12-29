@@ -19,6 +19,7 @@ export default function Post ({ postData }) {
         }
 
         getCelebType();
+        console.log(type)
     }
 
     return (
@@ -53,7 +54,7 @@ export default function Post ({ postData }) {
                                         <p className="label">Hán tự</p>
                                         <p>{ post.hantu }</p>
                                         <p className="label">Occupation</p>
-                                        <p>{ type.join(', ') }</p>
+                                        <p></p>
                                     </div>
                                     <div className="info-box-section">
                                         <p className="label">Born</p>
