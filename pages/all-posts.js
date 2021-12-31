@@ -27,11 +27,11 @@ export default function AllPosts ({ postData }) {
         <div className="recent-posts">
           <h2 className="highlight">All Posts</h2>
           <div className="posts-container">
-          {post.map(({ slug, date, title, description }) => (
+          {post.map(({ slug, datePosted, title, description }) => (
             <Link href={`/post/${ slug }`} key={ slug } passHref>
               <div className="post-container">
                   <p className="post-date">
-                    <Moment format="MMMM DD, YYYY">{ date }</Moment>
+                    <Moment format="MMMM DD, YYYY">{ datePosted }</Moment>
                   </p>
                   <h3 className="post-title">{ title }</h3>
                   <p className="post-preview">{ description }</p>

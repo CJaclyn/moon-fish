@@ -35,7 +35,7 @@ export default function Post ({ postData }) {
             <main>
                 <article className="page-container">
                     <p className="post-date">
-                        <Moment format="MMMM DD, YYYY">{ post.date }</Moment>
+                        <Moment format="MMMM DD, YYYY">{ post.datePosted }</Moment>
                     </p>
                     <h1 className="highlight">{ post.title }</h1>
                     { post.celebrity === true ? 

@@ -26,12 +26,12 @@ export default function Home ({ postData }) {
       <main>
       <div className="featured-posts">
         <h2 className="highlight">Featured Posts</h2>
-          {post.map(({ featured, slug, date, title, description }) => (
+          {post.map(({ featured, slug, datePosted, title, description }) => (
             <Link href={`/post/${ slug }`} key={ slug }>
               {featured == true ? 
                 <div className="post-container">
                   <p className="post-date">
-                    <Moment format="MMMM DD, YYYY">{ date }</Moment>
+                    <Moment format="MMMM DD, YYYY">{ datePosted }</Moment>
                   </p>
                   <h3 className="post-title">{ title }</h3>
                   <p className="post-preview">{ description }</p>
@@ -45,11 +45,11 @@ export default function Home ({ postData }) {
         <div className="recent-posts">
           <h2 className="highlight">Recent Posts</h2>
           <div className="posts-container">
-            {post.slice(0, 4).map(({ slug, date, title, description }) => (
+            {post.slice(0, 4).map(({ slug, datePosted, title, description }) => (
               <Link href={`/post/${ slug }`} key={ slug } passHref>
                 <div className="post-container">
                     <p className="post-date">
-                      <Moment format="MMMM DD, YYYY">{ date }</Moment>
+                      <Moment format="MMMM DD, YYYY">{ datePosted }</Moment>
                     </p>
                     <h3 className="post-title">{ title }</h3>
                     <p className="post-preview">{ description }</p>
