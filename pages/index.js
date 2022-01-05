@@ -34,7 +34,11 @@ export default function Home ({ postData }) {
                     <Moment format="MMMM DD, YYYY">{ datePosted }</Moment>
                   </p>
                   <h3 className="post-title">{ title }</h3>
-                  <p className="post-preview">{ description }</p>
+                  { description.length > 100 ?
+                    <p className="post-preview">{`${description.substr(0,100)}...`}</p>
+                    :
+                    <p className="post-preview">{ description }</p>
+                  }
                 </div>  
                 : 
                 ""
@@ -52,7 +56,11 @@ export default function Home ({ postData }) {
                       <Moment format="MMMM DD, YYYY">{ datePosted }</Moment>
                     </p>
                     <h3 className="post-title">{ title }</h3>
-                    <p className="post-preview">{ description }</p>
+                    { description.length > 100 ?
+                      <p className="post-preview">{`${description.substr(0,100)}...`}</p>
+                      :
+                      <p className="post-preview">{ description }</p>
+                    }
                 </div>                 
               </Link>
             ))}

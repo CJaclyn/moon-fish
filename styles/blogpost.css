@@ -17,13 +17,6 @@
   text-align: right;
 }
 
-.page-post .updated {
-  color: grey;
-  font-size: .9rem;
-  text-align: right;
-  line-height: normal;
-}
-
 .page-post .celebrity-top {
   display: -webkit-box;
   display: -ms-flexbox;
