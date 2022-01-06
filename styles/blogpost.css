@@ -9,6 +9,14 @@
   width: 100%;
 }
 
+.page-post .page-container a {
+  text-decoration: underline;
+}
+
+.page-post .page-container strong {
+  font-weight: 400;
+}
+
 .page-post .post-date {
   text-align: right;
 }
