@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap');
 @import 'variables';
-@font-face {
-    font-family: 'Nom Na Tong';
-    src: url('/fonts/NomNaTong-Regular.eot');
-    src: url('/fonts/NomNaTong-Regular.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/NomNaTong-Regular.woff2') format('woff2'),
-        url('/fonts/NomNaTong-Regular.woff') format('woff'),
-        url('/fonts/NomNaTong-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
 html,
 body {
     padding: 0;
     margin: 0;
+    @font-face {
+        font-family: 'Nom Na Tong';
+        src: url('/fonts/NomNaTong-Regular.eot');
+        src: url('/fonts/NomNaTong-Regular.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/NomNaTong-Regular.woff2') format('woff2'),
+            url('/fonts/NomNaTong-Regular.woff') format('woff'),
+            url('/fonts/NomNaTong-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-family: 'Noto Sans TC', sans-serif;
