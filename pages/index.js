@@ -21,7 +21,7 @@ export default function Home ({ postData }) {
       <Head>
         <title>Moon Fish Blog</title>
         <meta name="description" content="Vietnamese culture and history blog Moon Fish" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />.
       </Head>
       <main>
       <div className="featured-posts">
