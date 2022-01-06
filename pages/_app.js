@@ -1,6 +1,7 @@
 import '../styles/global.css'
 import '../styles/home.css'
 import '../styles/blogpost.css'
+import '../public/fonts/stylesheet.css'
 import Header from '../Header'
 import Footer from '../Footer'
 
