@@ -22,7 +22,9 @@ export default function Header () {
                 <p>
                     Vietnam history and culture blog
                 </p>
-                <a href="https://www.hannom-rcv.org/font.html" target="_blank" rel="noreferrer" className="nom-alert">This website uses Nôm characters.</a>
+                <Link href="/post/what-is-chu-nom-what-is-the-difference-between-chu-nom-and-chu-quoc-ngu">
+                    <a className="nom-alert">This website uses Nôm characters.</a>
+                </Link>
             </div>
             <Nav />
         </header>
