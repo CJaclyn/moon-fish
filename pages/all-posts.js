@@ -46,7 +46,7 @@ export default function AllPosts ({ postData }) {
 }
 
 export async function getStaticProps() {
-  const postData = await fetchAPI(`posts`)
+  const postData = await fetchAPI(`posts?sort[0]=datePosted:desc`)
 
   return {
     props: {
