@@ -17,6 +17,22 @@
   font-weight: 400;
 }
 
+.page-post .page-container h1 {
+  font-size: 1.25rem;
+}
+
+.page-post .page-container h2 {
+  font-size: 1.20rem;
+}
+
+.page-post .page-container h3 {
+  font-size: 1.15rem;
+}
+
+.page-post .page-container h4 {
+  font-size: 1.10rem;
+}
+
 .page-post .post-date {
   text-align: right;
 }
@@ -102,18 +118,24 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .page-post h1 {
-    font-size: 1.25rem;
-  }
-}
-
 @media only screen and (min-width: 600px) {
   .page-post .page-container {
     width: 500px;
     min-height: 707px;
   }
   .page-post .page-container h1 {
+    font-size: 2rem;
+  }
+  .page-post .page-container h2 {
+    font-size: 1.75rem;
+  }
+  .page-post .page-container h3 {
+    font-size: 1.50rem;
+  }
+  .page-post .page-container h4 {
+    font-size: 1.25rem;
+  }
+  .page-post .page-container .celeb-name {
     font-size: 1.25rem;
   }
 }

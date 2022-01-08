@@ -45,12 +45,12 @@ export default function Post ({ postData }) {
                                 <img src={ img } alt={`${ post.name } portrait`}></img>
                             </div>
                             <div className="info-box">
-                                <h2>{ post.name }</h2>
+                                <h2 className="celeb-name">{ post.name }</h2>
                                 <div className="info-box-container">
                                     <div className="info-box-section">
                                         <p className="label">Birthname</p>
                                         <p>{ post.birthname }</p>
-                                        <p className="label">Hán tự</p>
+                                        <p className="label">Chữ Nôm</p>
                                         <p>{ post.hantu }</p>
                                         <p className="label">Occupation</p>
                                         <p>{ type.join(', ') }</p>
