@@ -21,6 +21,7 @@ export default function Home ({ postData }) {
       <Head>
         <title>Moon Fish Blog</title>
         <meta name="description" content="Vietnamese culture and history blog Moon Fish" />
+        <meta name="google-site-verification" content="MbW6JHS758oGSsswA8wrRWsB2MU4fPisD0WsjuIpEtU" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
