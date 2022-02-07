@@ -20,7 +20,7 @@ export default function Header () {
                 </Link>
                 <h1>Moon Fish</h1>
                 <p>
-                    Vietnam history and culture blog
+                    Vietnam history and culture blog.<br />Informational content mixed with personal opinions.
                 </p>
                 <Link href="/post/what-is-chu-nom-and-why-doesn-t-vietnam-use-it-anymore">
                     <a className="nom-alert">This website uses Nôm characters.</a>
