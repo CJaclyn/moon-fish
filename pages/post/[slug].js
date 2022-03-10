@@ -50,7 +50,7 @@ export default function Post ({ postData }) {
                                     <div className="info-box-section">
                                         <p className="label">Birthname</p>
                                         <p>{ post.birthname }</p>
-                                        <p className="label">Chữ Nôm</p>
+                                        <p className="label">Hán-Nôm</p>
                                         <p>{ post.hantu }</p>
                                         <p className="label">Occupation</p>
                                         <p>{ type.join(', ') }</p>
