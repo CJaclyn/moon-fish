@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-export default function Footer () {
-    return (
-        <footer>
-            <p>&copy; 2021 Moon Fish</p>
-        </footer>
-    )
+export default function Footer() {
+  return (
+    <footer>
+      <p>&copy; 2021 Moon Fish</p>
+    </footer>
+  );
 }

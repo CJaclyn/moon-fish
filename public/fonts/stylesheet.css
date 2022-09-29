@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Nom Na Tong';
-    src: url('NomNaTong-Regular.eot');
-    src: url('NomNaTong-Regular.eot?#iefix') format('embedded-opentype'),
-        url('NomNaTong-Regular.woff2') format('woff2'),
-        url('NomNaTong-Regular.woff') format('woff'),
-        url('NomNaTong-Regular.ttf') format('truetype');
+    font-family: 'Han-Nom Gothic';
+    src: url('Han-NomGothic.eot');
+    src: url('Han-NomGothic.eot?#iefix') format('embedded-opentype'),
+        url('Han-NomGothic.woff2') format('woff2'),
+        url('Han-NomGothic.woff') format('woff'),
+        url('Han-NomGothic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

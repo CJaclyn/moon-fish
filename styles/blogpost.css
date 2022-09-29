@@ -14,7 +14,7 @@
 }
 
 .page-post .page-container strong {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .page-post .page-container h1 {
@@ -22,7 +22,7 @@
 }
 
 .page-post .page-container h2 {
-  font-size: 1.20rem;
+  font-size: 1.2rem;
 }
 
 .page-post .page-container h3 {
@@ -30,7 +30,7 @@
 }
 
 .page-post .page-container h4 {
-  font-size: 1.10rem;
+  font-size: 1.1rem;
 }
 
 .page-post .post-date {
@@ -58,7 +58,7 @@
 }
 
 .page-post .label {
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #272727;
 }
 
@@ -130,7 +130,7 @@
     font-size: 1.75rem;
   }
   .page-post .page-container h3 {
-    font-size: 1.50rem;
+    font-size: 1.5rem;
   }
   .page-post .page-container h4 {
     font-size: 1.25rem;
