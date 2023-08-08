@@ -1,10 +1,9 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import Moment from 'react-moment';
-import { fetchAPI } from '../lib/api';
+import Head from "next/head";
+import { fetchAPI } from "../lib/api";
+import BlogCard from "../components/BlogCard";
 
 export default function AllPosts({ postData }) {
-  const posts = postData['data'];
+  const posts = postData["data"];
   const post = [];
 
   function getPosts() {
@@ -17,29 +16,26 @@ export default function AllPosts({ postData }) {
   getPosts();
 
   return (
-    <div className='page-home page'>
+    <div className="page-home page">
       <Head>
         <title>Moon Fish Blog Posts</title>
         <meta
-          name='description'
-          content='Vietnamese culture and history blog Moon Fish posts'
+          name="description"
+          content="Vietnamese culture and history blog Moon Fish posts"
         />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className='recent-posts'>
-          <h2 className='highlight'>All Posts</h2>
-          <div className='posts-container'>
-            {post.map(({ slug, datePosted, title, description }) => (
-              <Link href={`/post/${slug}`} key={slug} passHref>
-                <div className='post-container'>
-                  <p className='post-date'>
-                    <Moment format='MMMM DD, YYYY'>{datePosted}</Moment>
-                  </p>
-                  <h3 className='post-title'>{title}</h3>
-                  <p className='post-preview'>{description}</p>
-                </div>
-              </Link>
+        <div className="recent-posts">
+          <h2 className="highlight">All Posts</h2>
+          <div className="posts-container">
+            {post.map(({ slug, title, description, thumbnail }) => (
+              <BlogCard
+                slug={slug}
+                title={title}
+                description={description}
+                thumbnail={thumbnail.data.attributes.url}
+              />
             ))}
           </div>
         </div>
@@ -49,7 +45,7 @@ export default function AllPosts({ postData }) {
 }
 
 export async function getStaticProps() {
-  const postData = await fetchAPI(`posts?sort[0]=datePosted:desc`);
+  const postData = await fetchAPI(`posts?sort[0]=datePosted:desc&populate=*`);
 
   return {
     props: {

@@ -1,11 +1,11 @@
-@import 'variables';
+@import "variables";
 
 .page-post {
   .page-container {
-    border: solid $primaryColor 1px;
-    padding: 1rem 2rem;
     width: 348px;
     min-height: 492px;
+    border-top: 1px solid $primaryColor;
+    padding-top: 2rem;
 
     img {
       width: 100%;
@@ -20,63 +20,20 @@
     }
 
     h1 {
-      font-size: 1.25rem;
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
-    h2 {
-      font-size: 1.2rem;
-    }
-
-    h3 {
-      font-size: 1.15rem;
-    }
-
+    h2,
+    h3,
     h4 {
-      font-size: 1.1rem;
+      font-weight: normal;
     }
   }
 
   .post-date {
     text-align: right;
-  }
-
-  .celebrity-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid 1px rgb(224, 224, 224);
-    padding: 2rem 0;
-
-    h2 {
-      margin-top: 1rem;
-      text-align: center;
-    }
-  }
-
-  .label {
-    font-size: 0.9rem;
-    color: rgb(39, 39, 39);
-  }
-
-  .portrait-container {
-    position: relative;
-    height: 300px;
-    width: 250px;
-
-    img {
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-    }
-  }
-
-  .info-box-container {
-    text-align: center;
-    width: 250px;
-  }
-
-  .celeb-post-content {
-    margin-top: 2rem;
+    color: grey;
   }
 
   @media only screen and (min-width: 450px) {
@@ -91,50 +48,12 @@
       width: 450px;
       min-height: 637px;
     }
-
-    .celebrity-top h2 {
-      text-align: left;
-    }
-
-    .info-box-container {
-      display: flex;
-      flex-direction: row;
-      text-align: left;
-    }
-
-    .info-box-section {
-      width: 50%;
-
-      &:last-of-type {
-        margin-left: 2rem;
-      }
-    }
   }
 
   @media only screen and (min-width: 600px) {
     .page-container {
       width: 500px;
       min-height: 707px;
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      h2 {
-        font-size: 1.75rem;
-      }
-
-      h3 {
-        font-size: 1.5rem;
-      }
-
-      h4 {
-        font-size: 1.25rem;
-      }
-
-      .celeb-name {
-        font-size: 1.25rem;
-      }
     }
   }
 
@@ -149,7 +68,6 @@
     .page-container {
       width: 600px;
       min-height: 849px;
-      padding: 1rem 3rem 2rem 3rem;
     }
   }
 
@@ -157,36 +75,6 @@
     .page-container {
       width: 700px;
       min-height: 990px;
-      padding: 1rem 3rem 2rem 3rem;
-    }
-
-    .celebrity-top {
-      flex-direction: row;
-      padding: 0 2rem 0 0;
-
-      h2 {
-        margin-top: 0;
-      }
-    }
-
-    .portrait-container {
-      width: 225px;
-
-      img {
-        object-fit: cover;
-      }
-    }
-
-    .info-box {
-      margin-left: 2rem;
-    }
-
-    .info-box-container {
-      width: 100%;
-    }
-
-    .info-box-section {
-      width: 150px;
     }
   }
 
@@ -194,7 +82,6 @@
     .page-container {
       width: 824px;
       min-height: 1166px;
-      padding: 2rem 5rem 4rem 5rem;
     }
   }
 }

@@ -1,10 +1,9 @@
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 export default function ActiveLink({ children, href, className }) {
   const router = useRouter();
   const style = {
-    background: router.asPath === href ? '#FFF0F0' : '',
-    padding: router.asPath === href ? '.25rem 1rem' : '',
+    textDecoration: router.asPath === href ? "underline" : "",
   };
 
   const handleClick = (e) => {
