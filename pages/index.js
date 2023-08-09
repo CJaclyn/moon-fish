@@ -52,7 +52,7 @@ export default function Home({ postData }) {
                 key={slug}
                 slug={slug}
                 title={title}
-                description={description}
+                description={description.substring(0, 90)}
                 thumbnail={thumbnail.data.attributes.url}
               />
             ))}
