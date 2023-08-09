@@ -34,6 +34,7 @@ export default function Home({ postData }) {
               ({ featured, slug, title, description, thumbnail }) =>
                 featured && (
                   <BlogCard
+                    key={slug}
                     slug={slug}
                     title={title}
                     description={description}
@@ -48,6 +49,7 @@ export default function Home({ postData }) {
           <div className="posts-container">
             {post.slice(0, 4).map(({ slug, title, description, thumbnail }) => (
               <BlogCard
+                key={slug}
                 slug={slug}
                 title={title}
                 description={description}

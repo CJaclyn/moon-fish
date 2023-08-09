@@ -31,6 +31,7 @@ export default function AllPosts({ postData }) {
           <div className="posts-container">
             {post.map(({ slug, title, description, thumbnail }) => (
               <BlogCard
+                key={slug}
                 slug={slug}
                 title={title}
                 description={description}
