@@ -192,6 +192,12 @@ header {
       width: 632px;
       display: flex;
       flex-direction: row-reverse;
+      padding-left: 1rem;
+      border-left: 1px solid $primaryColor;
+
+      .post-info {
+        padding-top: 1rem;
+      }
 
       img {
         width: 300px;

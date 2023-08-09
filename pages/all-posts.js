@@ -34,7 +34,7 @@ export default function AllPosts({ postData }) {
                 key={slug}
                 slug={slug}
                 title={title}
-                description={description}
+                description={`${description.substring(0, 82)}...`}
                 thumbnail={thumbnail.data.attributes.url}
               />
             ))}
